@@ -82,18 +82,6 @@ const fixBalancesTokens = {
     '0x5d0fa4c5668e5809c83c95a7cef3a9dd7c68d4fe': { coingeckoId: "taraxa", decimals: 18 },
     '0xc26b690773828999c2612549cc815d1f252ea15e': { coingeckoId: "mountain-protocol-usdm", decimals: 18 },
   },
-  xlayer: {
-    [ADDRESSES.null]: { coingeckoId: "okb", decimals: 18 },
-  },
-  starknet: {
-    [ADDRESSES.starknet.BROTHER]: { coingeckoId: "starknet-brother", decimals: 18 },
-  },
-  corn:{
-    '0xda5ddd7270381a7c2717ad10d1c0ecb19e3cdfb2': { coingeckoId: "bitcoin", decimals: 18 },
-  },
-  nibiru: {
-    'unibi': { coingeckoId: "nibiru", decimals: 6 },
-  },
 }
 
 ibcChains.forEach(chain => fixBalancesTokens[chain] = { ...ibcMappings, ...(fixBalancesTokens[chain] || {}) })
